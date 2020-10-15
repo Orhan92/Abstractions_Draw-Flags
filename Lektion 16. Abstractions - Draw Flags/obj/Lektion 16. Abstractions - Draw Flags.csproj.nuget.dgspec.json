@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\orhan\\source\\repos\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags.csproj": {}
+    "C:\\Users\\orhan\\Documents\\GitHub\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags.csproj": {}
   },
   "projects": {
-    "C:\\Users\\orhan\\source\\repos\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags.csproj": {
+    "C:\\Users\\orhan\\Documents\\GitHub\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\orhan\\source\\repos\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags.csproj",
+        "projectUniqueName": "C:\\Users\\orhan\\Documents\\GitHub\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags.csproj",
         "projectName": "Lektion 16. Abstractions - Draw Flags",
-        "projectPath": "C:\\Users\\orhan\\source\\repos\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags.csproj",
+        "projectPath": "C:\\Users\\orhan\\Documents\\GitHub\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags.csproj",
         "packagesPath": "C:\\Users\\orhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\orhan\\source\\repos\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\obj\\",
+        "outputPath": "C:\\Users\\orhan\\Documents\\GitHub\\Lektion 16. Abstractions - Draw Flags\\Lektion 16. Abstractions - Draw Flags\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\orhan\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -12,7 +12,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
         {
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
-            Console.WriteLine("Hello!");
+            Console.WriteLine("Hej");
         }
     }
 
