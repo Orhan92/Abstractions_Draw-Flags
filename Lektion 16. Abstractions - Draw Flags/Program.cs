@@ -12,12 +12,11 @@ namespace Lektion_16.Abstractions___Draw_Flags
         {
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
             //Row 1
-            Console.BackgroundColor = ConsoleColor.Blue;    
+            Console.BackgroundColor = ConsoleColor.Blue;
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
-            Console.SetCursorPosition(12, 0);
-            Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 0);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
@@ -26,8 +25,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
-            Console.SetCursorPosition(12, 1);
-            Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 1);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
@@ -36,8 +34,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
-            Console.SetCursorPosition(12, 2);
-            Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 2);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
@@ -46,8 +43,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
-            Console.SetCursorPosition(12, 3);
-            Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 3);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
@@ -61,8 +57,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
-            Console.SetCursorPosition(12, 5);
-            Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 5);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
@@ -71,8 +66,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
-            Console.SetCursorPosition(12, 6);
-            Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 6);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
@@ -81,8 +75,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
-            Console.SetCursorPosition(12, 7);
-            Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 7);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
@@ -91,8 +84,11 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
+            /*
             Console.SetCursorPosition(12, 8);
             Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
+            */
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 8);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
         }
@@ -105,9 +101,10 @@ namespace Lektion_16.Abstractions___Draw_Flags
             }
             return space;
         }
-        public static void DrawVerticalTricolorFlag(ConsoleColor leftColor, ConsoleColor middleColor, ConsoleColor rightColor)
+        public static void SetPositionAndColor(ConsoleColor color, int column, int row)
         {
-
+            Console.BackgroundColor = color;
+            Console.SetCursorPosition(column, row);
         }
     }
 
