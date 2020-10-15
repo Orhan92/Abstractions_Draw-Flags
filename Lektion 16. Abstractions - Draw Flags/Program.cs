@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -13,9 +14,10 @@ namespace Lektion_16.Abstractions___Draw_Flags
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
             //Row 1
             Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(30, 9, ' '));
             Console.ResetColor();
 
+            /*
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 0);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
@@ -84,20 +86,31 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
-            /*
-            Console.SetCursorPosition(12, 8);
-            Console.BackgroundColor = ConsoleColor.DarkYellow; //Yellow
-            */
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 8);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
-            Console.ResetColor();
+            Console.ResetColor(); */
+
         }
-        public static string ColorSpacesAndSymbol(int spaces, char x) //Amount of spaces and char inside the color, to leave it blank just leave the parameter when you call it in main to ' '.
+        public static string ColorColumns (int column, int rows, char x)
+        {
+            string row = "";
+            for (int i = 0; i < rows; i++)
+            {
+                Console.SetCursorPosition(column, rows);
+                row += x;
+            }
+            return row;
+        }
+        public static string ColorSpacesAndSymbol(int spaces, int rows, char x) //Amount of spaces and char inside the color, to leave it blank just leave the parameter when you call it in main to ' '.
         {
             string space = "";
-            for (int i = 0; i < spaces; i++)
+            for (int j = 0; j < rows; j++)
             {
-                space += x;
+                for (int i = 0; i < spaces; i++)
+                {
+                    space += x;
+                }
+                space += "\n";
             }
             return space;
         }
@@ -106,6 +119,11 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.BackgroundColor = color;
             Console.SetCursorPosition(column, row);
         }
+        public static void Color(ConsoleColor color)
+        {
+            Console.BackgroundColor = color;
+        }
+
     }
 
     [TestClass]
