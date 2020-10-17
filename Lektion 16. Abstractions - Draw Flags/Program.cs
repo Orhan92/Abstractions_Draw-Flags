@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Globalization;
 using System.Linq;
@@ -12,77 +13,46 @@ namespace Lektion_16.Abstractions___Draw_Flags
         public static void Main()
         {
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
-            //Row 1
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
+
+            ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4);
             Console.ResetColor();
+
+            ColorRowsAndSpaces(ConsoleColor.DarkYellow, 30, 1);
+            Console.ResetColor();
+
+            ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4);
+            Console.ResetColor();
+
+
+
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 0);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
-            Console.ResetColor();
-
-            //Row 2
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 1);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
-            //Row 3
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
-            Console.ResetColor();
-
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 2);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
-            Console.ResetColor();
-
-            //Row 4
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 3);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
-            //Row 5 - Only DarkYellow
-            Console.BackgroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
-            Console.ResetColor();
-
-            //Row 6
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
-            Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 5);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
-            Console.ResetColor();
-
-            //Row 7
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 6);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
 
-            //Row 8
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
-            Console.ResetColor();
-
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 7);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
-            Console.ResetColor();
-
-            //Row 9
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(ColorSpacesAndSymbol(30, ' '));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 8);
@@ -105,6 +75,23 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.BackgroundColor = color;
             Console.SetCursorPosition(column, row);
         }
+
+        public static string ColorRowsAndSpaces(ConsoleColor color, int spaces, int rows) //Color and spaces, rows
+        {
+            Console.BackgroundColor = color;
+            string row = "";
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < spaces; j++)
+                {
+                    row += " ";
+                }
+                row += "\n";
+            }
+            Console.Write(row);
+            return row;
+        }
+
     }
 
     [TestClass]
