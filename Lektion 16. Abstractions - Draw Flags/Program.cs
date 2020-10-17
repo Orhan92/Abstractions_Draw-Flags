@@ -24,47 +24,39 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.ResetColor();
 
             //Total: 9 rows.
-
             //We have to make all the ones below to not repeat. We should be able to create a Method that can solve this problem.
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 0, 2);
-            Console.ResetColor();
 
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 1, 2);
-            Console.ResetColor();
+            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 1, 2); //Color, Column, Row, Thickness
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 2, 2);
-            Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 3, 2);
-            Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 5, 2);
-            Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 6, 2);
-            Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 7, 2);
-            Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 8, 2);
-            Console.ResetColor();
+            Console.ResetColor(); //We only use this once because in all the lines above we just use one color. No need to reset until here.
         }
 
-        public static void SetPositionAndColor(ConsoleColor color, int column, int row, int spaces)
+        public static void SetPositionAndColor(ConsoleColor color, int column, int row, int spaceThickness)
         {
             Console.BackgroundColor = color;
             Console.SetCursorPosition(column, row);
             string space = "";
 
-            for (int i = 0; i < spaces; i++)
+            for (int i = 0; i < spaceThickness; i++)
             {
                 space += " ";
             }
             Console.WriteLine(space);
         }
 
-        public static string ColorRowsAndSpaces(ConsoleColor color, int spaces, int rows) //Color and spaces, rows
+        public static void ColorRowsAndSpaces(ConsoleColor color, int spaces, int rows) //Color and spaces, rows
         {
             Console.BackgroundColor = color;
             string row = "";
@@ -77,7 +69,6 @@ namespace Lektion_16.Abstractions___Draw_Flags
                 row += "\n";
             }
             Console.Write(row);
-            return row;
         }
     }
 
