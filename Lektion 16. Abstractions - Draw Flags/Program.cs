@@ -36,13 +36,10 @@ namespace Lektion_16.Abstractions___Draw_Flags
             ColorRowsAndSpaces(ConsoleColor.Red, 30, 4);
             VerticalColor(ConsoleColor.White, 12, 20, 4);
             VerticalColor(ConsoleColor.White, 12, 25, 4);
-            Console.WriteLine();
-
         }
         public static void VerticalColor(ConsoleColor color, int column, int startRow, int numberOfRows)
         {
             Console.BackgroundColor = color;
-
             string spaces = "";
             for (int i = 0; i < numberOfRows; i++)
             {
