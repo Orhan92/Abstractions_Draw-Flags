@@ -23,37 +23,23 @@ namespace Lektion_16.Abstractions___Draw_Flags
             ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4); //4 Rows of blue
             Console.ResetColor();
 
-            //Total: 9 rows.
-            //We have to make all the ones below to not repeat. We should be able to create a Method that can solve this problem.
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 0, 2);
+            VerticalColor(ConsoleColor.DarkYellow, 12, 0, 4); //Yellow, Column 12, Row 0 (first), vertical length 4
+            VerticalColor(ConsoleColor.DarkYellow, 12, 5, 4); //Yellow, Column 12, Row 5 (sixth), vertical length 4
+            Console.ResetColor();
 
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 1, 2); //Color, Column, Row, Thickness
-
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 2, 2);
-
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 3, 2);
-
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 5, 2);
-
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 6, 2);
-
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 7, 2);
-
-            SetPositionAndColor(ConsoleColor.DarkYellow, 12, 8, 2);
-            Console.ResetColor(); //We only use this once because in all the lines above we just use one color. No need to reset until here.
         }
-
-        public static void SetPositionAndColor(ConsoleColor color, int column, int row, int spaceThickness)
+        public static void VerticalColor(ConsoleColor color, int column,int startRow, int numberOfRows)
         {
             Console.BackgroundColor = color;
-            Console.SetCursorPosition(column, row);
-            string space = "";
 
-            for (int i = 0; i < spaceThickness; i++)
+            string spaces = "";
+            for (int i = 0; i < numberOfRows; i++)
             {
-                space += " ";
+                Console.SetCursorPosition(column, startRow);
+                spaces = "  ";
+                Console.WriteLine(spaces);
+                startRow++;
             }
-            Console.WriteLine(space);
         }
 
         public static void ColorRowsAndSpaces(ConsoleColor color, int spaces, int rows) //Color and spaces, rows
