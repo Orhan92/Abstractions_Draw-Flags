@@ -58,7 +58,6 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
         }
-
         public static string ColorSpacesAndSymbol(int spaces) //Amount of spaces (In this case it is here for THICKNESS
         {
             string space = "";
@@ -74,7 +73,6 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.BackgroundColor = color;
             Console.SetCursorPosition(column, row);
         }
-
         public static string ColorRowsAndSpaces(ConsoleColor color, int spaces, int rows) //Color and spaces, rows
         {
             Console.BackgroundColor = color;
