@@ -27,45 +27,45 @@ namespace Lektion_16.Abstractions___Draw_Flags
 
             //We have to make all the ones below to not repeat. We should be able to create a Method that can solve this problem.
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 0);
-            Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 1);
-            Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 2);
-            Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 3);
-            Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 5);
-            Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 6);
-            Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 7);
-            Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 8);
-            Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
+            Console.WriteLine(ColorSpacesAndSymbol(2));
             Console.ResetColor();
         }
 
-        public static string ColorSpacesAndSymbol(int spaces, char x) //Amount of spaces and char inside the color, to leave it blank just leave the parameter when you call it in main to ' '.
+        public static string ColorSpacesAndSymbol(int spaces) //Amount of spaces (In this case it is here for THICKNESS
         {
             string space = "";
 
             for (int i = 0; i < spaces; i++)
             {
-                space += x;
+                space += " ";
             }
             return space;
         }
@@ -90,7 +90,6 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.Write(row);
             return row;
         }
-
     }
 
     [TestClass]
