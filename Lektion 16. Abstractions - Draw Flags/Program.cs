@@ -14,18 +14,29 @@ namespace Lektion_16.Abstractions___Draw_Flags
         {
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
+            //SWEDISH FLAG
             ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4); //4 rows of Blue
-            Console.ResetColor();
-
             ColorRowsAndSpaces(ConsoleColor.DarkYellow, 30, 1); //1 row of Dark yellow
-            Console.ResetColor();
-
             ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4); //4 Rows of blue
-            Console.ResetColor();
-
             VerticalColor(ConsoleColor.DarkYellow, 12, 0, 4); //Yellow, Column 12, Row 0 (first), vertical length 4
             VerticalColor(ConsoleColor.DarkYellow, 12, 5, 4); //Yellow, Column 12, Row 5 (sixth), vertical length 4
-            Console.ResetColor();
+
+            Console.WriteLine();
+            //FINISH FLAG
+            ColorRowsAndSpaces(ConsoleColor.White, 30, 4);
+            ColorRowsAndSpaces(ConsoleColor.Blue, 30, 1);
+            ColorRowsAndSpaces(ConsoleColor.White, 30, 4);
+            VerticalColor(ConsoleColor.Blue, 12, 10, 4);
+            VerticalColor(ConsoleColor.Blue, 12, 15, 4);
+
+            Console.WriteLine();
+            //DANISH FLAG
+            ColorRowsAndSpaces(ConsoleColor.Red, 30, 4);
+            ColorRowsAndSpaces(ConsoleColor.White, 30, 1);
+            ColorRowsAndSpaces(ConsoleColor.Red, 30, 4);
+            VerticalColor(ConsoleColor.White, 12, 20, 4);
+            VerticalColor(ConsoleColor.White, 12, 25, 4);
+            Console.WriteLine();
 
         }
         public static void VerticalColor(ConsoleColor color, int column,int startRow, int numberOfRows)
@@ -40,6 +51,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
                 Console.WriteLine(spaces);
                 startRow++;
             }
+            Console.ResetColor();
         }
 
         public static void ColorRowsAndSpaces(ConsoleColor color, int spaces, int rows) //Color and spaces, rows
@@ -55,6 +67,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
                 row += "\n";
             }
             Console.Write(row);
+            Console.ResetColor();
         }
     }
 
