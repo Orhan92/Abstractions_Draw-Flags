@@ -39,7 +39,7 @@ namespace Lektion_16.Abstractions___Draw_Flags
             Console.WriteLine();
 
         }
-        public static void VerticalColor(ConsoleColor color, int column,int startRow, int numberOfRows)
+        public static void VerticalColor(ConsoleColor color, int column, int startRow, int numberOfRows)
         {
             Console.BackgroundColor = color;
 
