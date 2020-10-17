@@ -14,18 +14,18 @@ namespace Lektion_16.Abstractions___Draw_Flags
         {
             CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
 
-            ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4);
+            ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4); //4 rows of Blue
             Console.ResetColor();
 
-            ColorRowsAndSpaces(ConsoleColor.DarkYellow, 30, 1);
+            ColorRowsAndSpaces(ConsoleColor.DarkYellow, 30, 1); //1 row of Dark yellow
             Console.ResetColor();
 
-            ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4);
+            ColorRowsAndSpaces(ConsoleColor.Blue, 30, 4); //4 Rows of blue
             Console.ResetColor();
 
+            //Total: 9 rows.
 
-
-
+            //We have to make all the ones below to not repeat. We should be able to create a Method that can solve this problem.
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 0);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
@@ -41,7 +41,6 @@ namespace Lektion_16.Abstractions___Draw_Flags
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 3);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
             Console.ResetColor();
-
 
             SetPositionAndColor(ConsoleColor.DarkYellow, 12, 5);
             Console.WriteLine(ColorSpacesAndSymbol(2, ' '));
